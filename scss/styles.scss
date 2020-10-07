@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import "_variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: color(--light-gray);
+}
+.container {
+    margin: 3rem;
+    background-color: white;
+    border-radius: 0.5rem;  
+
+}
+.top, .left, .right {
+    padding: 2rem;
+}
+/*--top container--*/ 
+.top {
+    h3 {
+        color: color(--cyan);
+    }
+    h4 {
+        color: color(--bright-yellow);
+        margin: 2rem 0;
+    }
+    p {
+        color: color(--grayish-blue);
+        line-height: 2rem;
+    }
+}
+/*--bottom container--*/ 
+.left {
+    background-color: color(--cyan);
+    color: white;
+
+    .price {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        p {
+            margin-left: 0.5rem;
+            color: color(--light-gray);
+            font-weight: 400;
+        }
+    }
+    .content {
+        margin: 0.5rem 0 1.5rem 0;
+    }
+    .btn {
+        background-color: color(--bright-yellow);
+        text-align: center;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.2rem 0.5rem color(--grayish-blue);
+    }
+}
+.right {
+    background-color: color(--cyan-light);
+    color: white;
+    border-radius: 0 0 0.5rem 0.5rem;
+    
+    h3 {
+        margin-bottom: 2rem;
+    }
+}
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+    a {
+        text-decoration: none;
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+/*--media queries--*/ 
+@media screen and (min-width: 48em ) {
+    body {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container {
+        width: 50em;      
+    }
+    .top {
+        h4 {
+            margin: 2em 0 1em 0;
+        }
+    }
+    .bottom {
+        display: flex;
+
+        .left {
+            width: 50%;
+            border-radius: 0 0 0 0.5rem;
+        }
+        .right {
+            width: 50%;
+            border-radius: 0 0 0.5rem 0;
+
+            h3 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+.attribution {
+    position: absolute;
+}

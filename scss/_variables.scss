@@ -1,0 +1,11 @@
+$colors: (
+    --cyan: hsl(179, 62%, 43%),
+    --cyan-light: hsl(179, 42%, 56%),
+    --bright-yellow: hsl(71, 73%, 54%),
+    --light-gray: hsl(204, 43%, 93%),
+    --grayish-blue: hsl(218, 22%, 67%),
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name )
+};
